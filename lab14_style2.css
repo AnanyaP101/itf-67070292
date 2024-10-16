@@ -1,0 +1,116 @@
+
+.profile{
+    width: 183px;
+    height: 183px;
+    background-image: url(https://i.pinimg.com/236x/23/77/b5/2377b5bf6f32a1c52b8767822f5a6c96.jpg);
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border: 5px solid #89cf26;
+
+}
+.notify{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(241, 53, 53);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+
+
+}
+.earn{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    
+}
+
+.earn2{
+    display: flex;
+    justify-content: center;
+
+}
+.contactlst{
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+    display: flex;
+    justify-content: inherit;
+}
+
+div {
+    border: 1px solid blue;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    background-color: #f0eae0;
+    color: #333;
+    align-items: center;
+    height: 100vh;
+    margin: 2;
+    justify-content: center;
+    padding: 20px;
+
+}
+
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.clickme{
+    color: rgb(83, 52, 34);
+    display: flex;
+    justify-content: center;
+    
+}
+a {
+    text-decoration: none;
+    }
+.clickme:hover{
+    color: rgb(0, 66, 197);
+    font-size: 32px;
+}
+
+.btn {
+    background-color: #936943;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 5px;
+}
+.btn:hover {
+    background-color: #6b4f2c;
+}
+
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #d8cfc4;
+}
+
+footer{
+    text-align : center;
+    justify-content: center;
+    height: 100vh;
+
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EARN V.2</title>
+    <link rel="stylesheet" href="lab14_style2.css">
+</head>
+<body>
+    <a href="https://github.com/AnanyaP101"><h1 class="clickme" id ="username" >Username, hi</h1></a>
+    <div class = "earn">
+        <div class="profile" id="profile">
+            <div class="notify">
+                <p>1</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="earn2">
+        <label>set username</label><input id="input-name" type="text"><button class="btn" onclick="setName()">SET</button>
+        <label>set image</label><input id="input-url" type="text"><button class="btn" onclick="setImg()">SET</button>
+    </div>
+        
+        
+    <div class="contactlst">
+        <input type="text" id="cell1" placeholder="enter name">
+        <input type="text" id="cell2" placeholder="enter phone number">
+        <button class="btn" onclick="addRow()">Add</button>
+        <button class="btn" onclick="exportContacts()">Export</button>
+    </div>
+
+    <table id="phoneTable" name="phoneTable">
+         <thead>
+            <tr>
+                <th>No.</th>
+                <th>Name</th>
+                <th>Phone-Number</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    
+
+    <script>
+
+        const name = document.getElementById("username");
+        const inputName = document.getElementById("input-name");
+        const profile = document.getElementById("profile");
+        const inputUrl = document.getElementById("input-url");
+
+        const inputTable = document.getElementById("phoneTable");
+
+        let count = 0;
+        var phonenumber = [];
+
+        function setName(){
+            name.textContent = inputName.value + ", love dog";
+            inputName.value = "";
+        }
+        function setImg(){
+            profile.style.backgroundImage = "url(" + inputUrl.value;
+        }
+
+        function addRow(){
+            count += 1;
+            const row = document.createElement("tr");
+            const cellNo = document.createElement("td");
+            const cellName = document.createElement("td");
+            const cellTel = document.createElement("td");
+
+            cellNo.textContent = count;
+            cellName.textContent = document.getElementById("cell1").value;
+            cellTel.textContent = document.getElementById("cell2").value;
+            row.appendChild(cellNo);
+            row.appendChild(cellName);
+            row.appendChild(cellTel);
+
+            const inputTable = document.getElementById("phoneTable");
+            inputTable.appendChild(row);
+
+            let arr = [];
+            arr.push(count);
+            arr.push(document.getElementById("cell1").value);
+            arr.push(document.getElementById("cell2").value);
+            phonenumber.push(arr);
+            console.log(phonenumber);
+    
+            document.getElementById("cell1").value = "";
+            document.getElementById("cell2").value = "";
+        }
+        function exportContacts() {
+            const csvContent = phonenumber.map(row => row.join(",")).join("\n");
+            const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+            const link = document.createElement("a");
+            const url = URL.createObjectURL(blob);
+
+            link.setAttribute("href", url);
+            link.setAttribute("download", "NameAndPhoneNum.csv");
+            link.style.visibility = "hidden";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        };
+    </script>
+
+</body>
+<footer>
+    <p>Ananyaporn Sakham 67070292</p>
+</footer>
+</html>
