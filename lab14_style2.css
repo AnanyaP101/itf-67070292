@@ -7,6 +7,8 @@
     background-size: cover;
     background-position: center;
     position: relative;
+    margin: auto;
+
     border: 5px solid #89cf26;
 
 }
@@ -21,66 +23,67 @@
     position: absolute;
     bottom: 15px;
     right: 15px;
-
-
-}
-.earn{
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    
 }
 
 .earn2{
     display: flex;
     justify-content: center;
-
+    margin-top: 15px;
+    column-gap: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.contactlst{
-    margin-top: 20px;
-    border-collapse: collapse;
-    width: 100%;
-    display: flex;
-    justify-content: inherit;
-}
-
-div {
-    border: 1px solid blue;
+.earn3{
     display: flex;
     justify-content: center;
+    margin-top: 25px;
+    column-gap: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
     background-color: #f0eae0;
     color: #333;
     align-items: center;
-    height: 100vh;
+    height: 0vh;
     margin: 2;
     justify-content: center;
     padding: 20px;
+    
 
+}
+.text{
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    font-size: 20px;   
 }
 
 table {
-    margin-top: 20px;
+    width: 70%;
     border-collapse: collapse;
-    width: 50%;
-    justify-content: center;
-    align-items: center;
+    border-spacing: 10px;
+    margin: 20px 0;
+    border: 2px solid black;
 }
+
 
 .clickme{
     color: rgb(83, 52, 34);
     display: flex;
     justify-content: center;
+    text-decoration: none;
     
 }
-a {
-    text-decoration: none;
-    }
+
 .clickme:hover{
     color: rgb(0, 66, 197);
     font-size: 32px;
+}
+.box{
+    display:flex;
+    justify-self: center;
+    column-gap: 10px ;
+
 }
 
 .btn {
@@ -96,7 +99,11 @@ a {
 .btn:hover {
     background-color: #6b4f2c;
 }
-
+.contactlst{
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+}
 
 th, td {
     border: 1px solid #ddd;
@@ -108,9 +115,20 @@ th {
     background-color: #d8cfc4;
 }
 
+table tr{
+    padding: 10px;
+    text-align: center;
+}
+
 footer{
     text-align : center;
     justify-content: center;
     height: 100vh;
 
+}
+
+.items {
+    display: flex;
+    flex-direction: row;
+    justify-content:center ;
 }
